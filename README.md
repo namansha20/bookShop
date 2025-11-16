@@ -4,7 +4,9 @@ A complete Spring MVC web application for managing books using Hibernate and Aiv
 
 ## 📖 Documentation
 
+- **[HOW_TO_RUN.md](HOW_TO_RUN.md)** - Quick reference for running the project
 - **[QUICKSTART.md](QUICKSTART.md)** - Get started in 5 minutes!
+- **[ECLIPSE_SETUP.md](ECLIPSE_SETUP.md)** - Complete guide to setup and run in Eclipse IDE
 - **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** - Detailed implementation overview
 - **[database-setup.sql](database-setup.sql)** - SQL script for manual database setup
 
@@ -38,10 +40,24 @@ Before running this application, make sure you have the following installed:
    - Download from: https://tomcat.apache.org/download-90.cgi
    - Extract to a folder on your system
 
-5. **Visual Studio Code**
-   - Download from: https://code.visualstudio.com/
+5. **IDE (Choose one)**
+   - **Eclipse IDE**: See [ECLIPSE_SETUP.md](ECLIPSE_SETUP.md) for complete Eclipse setup guide
+   - **Visual Studio Code**: See instructions below
 
-## 🛠️ VS Code Setup
+## 🛠️ IDE Setup Guides
+
+### Eclipse IDE (Recommended for Enterprise Java)
+For a complete step-by-step guide on setting up this project in Eclipse IDE, see:
+👉 **[ECLIPSE_SETUP.md](ECLIPSE_SETUP.md)**
+
+This guide covers:
+- Importing the Maven project into Eclipse
+- Configuring Tomcat server in Eclipse
+- Building and deploying the application
+- Debugging and troubleshooting in Eclipse
+- Eclipse-specific tips and tricks
+
+### Visual Studio Code Setup
 
 ### Install Required Extensions
 
