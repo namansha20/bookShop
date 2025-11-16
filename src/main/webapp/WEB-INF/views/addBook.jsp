@@ -13,8 +13,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,92 +21,56 @@
             padding: 20px;
         }
         .container {
-            background: white;
+            border: 1px solid black;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             max-width: 500px;
             width: 100%;
         }
         h1 {
-            color: #333;
             margin-bottom: 30px;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
         }
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         label {
             display: block;
-            margin-bottom: 8px;
-            color: #555;
-            font-weight: bold;
-            font-size: 1em;
+            margin-bottom: 5px;
         }
         input[type="text"],
         input[type="number"] {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border-color 0.3s ease;
-        }
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            outline: none;
-            border-color: #667eea;
+            padding: 8px;
+            border: 1px solid black;
         }
         .button-group {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 10px;
+            margin-top: 20px;
         }
         .btn {
             flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            font-weight: bold;
+            padding: 10px;
+            border: 1px solid black;
+            background: white;
             cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
             text-align: center;
         }
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .btn-secondary {
-            background: #f0f0f0;
-            color: #333;
-        }
-        .btn-secondary:hover {
-            background: #e0e0e0;
-        }
         .back-link {
             display: block;
             text-align: center;
-            margin-top: 20px;
-            color: #667eea;
+            margin-top: 15px;
             text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
+            color: black;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 Add New Book</h1>
+        <h1>Add New Book</h1>
         <form:form action="${pageContext.request.contextPath}/books/saveBook" 
                    modelAttribute="book" 
                    method="post">
@@ -132,14 +95,14 @@
             </div>
             
             <div class="button-group">
-                <button type="submit" class="btn btn-primary">💾 Save Book</button>
+                <button type="submit" class="btn">Save Book</button>
                 <a href="${pageContext.request.contextPath}/books/viewBooks" 
-                   class="btn btn-secondary">❌ Cancel</a>
+                   class="btn">Cancel</a>
             </div>
         </form:form>
         
         <a href="${pageContext.request.contextPath}/books/" class="back-link">
-            ⬅️ Back to Home
+            Back to Home
         </a>
     </div>
 </body>

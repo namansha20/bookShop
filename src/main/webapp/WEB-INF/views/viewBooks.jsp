@@ -13,131 +13,68 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
             min-height: 100vh;
             padding: 40px 20px;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            border: 1px solid black;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         h1 {
-            color: #333;
             margin-bottom: 30px;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
         }
         .actions {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             margin-bottom: 30px;
             justify-content: center;
         }
         .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid black;
+            background: white;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            transition: all 0.3s ease;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .btn-secondary {
-            background: #f0f0f0;
-            color: #333;
-        }
-        .btn-secondary:hover {
-            background: #e0e0e0;
         }
         .books-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-        .books-table thead {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
         }
         .books-table th,
         .books-table td {
-            padding: 15px;
+            padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border: 1px solid black;
         }
         .books-table th {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .books-table tbody tr {
-            transition: background-color 0.3s ease;
-        }
-        .books-table tbody tr:hover {
-            background-color: #f5f5f5;
-        }
-        .books-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-        .price {
-            color: #27ae60;
             font-weight: bold;
         }
         .empty-message {
             text-align: center;
             padding: 40px;
-            color: #666;
-            font-size: 1.2em;
         }
         .empty-message p {
             margin-bottom: 20px;
-        }
-        .book-id {
-            color: #667eea;
-            font-weight: bold;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            .books-table {
-                font-size: 0.9em;
-            }
-            .books-table th,
-            .books-table td {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 All Books</h1>
+        <h1>All Books</h1>
         
         <div class="actions">
-            <a href="${pageContext.request.contextPath}/books/addBook" class="btn btn-primary">
-                ➕ Add New Book
+            <a href="${pageContext.request.contextPath}/books/addBook" class="btn">
+                Add New Book
             </a>
-            <a href="${pageContext.request.contextPath}/books/" class="btn btn-secondary">
-                🏠 Home
+            <a href="${pageContext.request.contextPath}/books/" class="btn">
+                Home
             </a>
         </div>
         
@@ -155,10 +92,10 @@
                     <tbody>
                         <c:forEach var="book" items="${books}">
                             <tr>
-                                <td class="book-id">#${book.bookId}</td>
+                                <td>#${book.bookId}</td>
                                 <td>${book.title}</td>
                                 <td>${book.author}</td>
-                                <td class="price">$${book.price}</td>
+                                <td>$${book.price}</td>
                             </tr>
                         </c:forEach>
                     </tbody>
@@ -166,8 +103,8 @@
             </c:when>
             <c:otherwise>
                 <div class="empty-message">
-                    <p>📭 No books found in the library.</p>
-                    <a href="${pageContext.request.contextPath}/books/addBook" class="btn btn-primary">
+                    <p>No books found in the library.</p>
+                    <a href="${pageContext.request.contextPath}/books/addBook" class="btn">
                         Add Your First Book
                     </a>
                 </div>
